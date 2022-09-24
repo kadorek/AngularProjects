@@ -1,1 +1,19 @@
-<p>product works!</p>
+<h3 *ngIf="products.length>0 ; else noProduct">{{title}}</h3>
+<div class="row">
+    <ng-template #noProduct>
+        <div class="alert alert-primary" role="alert">
+            Gösterilcek ürün bulunamadı !
+        </div>
+    </ng-template>
+
+    <div *ngFor="let p of products" class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{p.name}}</h5>
+            <p class="card-text">{{p.description}}
+            </p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+    </div>
+
+</div>

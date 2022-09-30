@@ -29,8 +29,6 @@ export class ProductComponent implements OnInit {
   }
 
   AddToCart(product: Product) {
-
-    //alertify.success(product.name + " ürünü sepete eklendi");
     this.mService.Success(product.name + " ürünü sepete eklendi");
   }
 

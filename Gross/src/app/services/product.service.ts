@@ -18,6 +18,14 @@ export class ProductService {
       catchError(this.handleError)
     );
   }
+  getAllProductsByName(categoryName:string): Observable<Product[]> {
+    //console.log(categoryName)
+    let newPath=this.path+"?category="+categoryName.toLowerCase();
+    return this.http.get<Product[]>(newPath).pipe(
+      /* tap(data => console.log(JSON.stringify(data))), */
+      catchError(this.handleError)
+    );
+  }
 
   handleError(e: HttpErrorResponse) {
     //throw new Error('Method not implemented.');

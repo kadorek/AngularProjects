@@ -1,11 +1,15 @@
-export class Product{
+export class Product {
 
     id:number;
-    name:string;
-    price:number;
-    categoryId:number;
+    title:string;
     description:string;
-    imageUrl:string;
-
+    price:number;
+    discountPercentage:number;
+    rating:number;
+    stock:number;
+    brand:string;
+    category:string;
+    thumbnail:string;
+    images:string[];
 
 }
